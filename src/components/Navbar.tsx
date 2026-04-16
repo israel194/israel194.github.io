@@ -50,17 +50,17 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 md:top-8 right-0 left-0 z-50 pt-[env(safe-area-inset-top)] transition-all duration-500 ease-in-out ${
         scrolled
-          ? "bg-[#1a2744]/96 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.35)] pb-3 border-b border-white/8"
-          : "bg-transparent pb-4"
+          ? "bg-[#1a2744]/96 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.35)] pb-5 border-b border-white/8"
+          : "bg-transparent pb-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between">
         {/* Logo — fixed width to balance the CTA on the other side */}
         <a href="#" className="flex flex-col leading-none lg:w-32">
-          <span className="text-white font-bold text-xl tracking-[0.2em] uppercase">
+          <span className="text-white font-bold text-2xl tracking-[0.2em] uppercase">
             GATE<span className="text-gold">.</span>
           </span>
-          <span className="text-white/40 text-[9px] tracking-[0.3em] uppercase font-medium mt-0.5">
+          <span className="text-white/40 text-[10px] tracking-[0.3em] uppercase font-medium mt-0.5">
             Jerusalem
           </span>
         </a>
@@ -73,7 +73,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative text-[13px] tracking-wide transition-all duration-200 pb-0.5 ${
+                className={`relative text-[15px] tracking-wide transition-all duration-200 pb-0.5 ${
                   isActive
                     ? "text-gold font-semibold"
                     : "text-white/80 hover:text-white font-normal"
@@ -95,7 +95,7 @@ export default function Navbar() {
           <ShareButton />
           <a
             href="#contact"
-            className="relative whitespace-nowrap bg-gold hover:bg-[#d4b85e] text-navy font-bold text-[13px] tracking-wide px-6 py-2.5 rounded transition-all duration-200 shadow-[0_2px_12px_rgba(201,168,76,0.3)] hover:shadow-[0_4px_20px_rgba(201,168,76,0.45)] hover:-translate-y-px active:translate-y-0"
+            className="relative whitespace-nowrap bg-gold hover:bg-[#d4b85e] text-navy font-bold text-[15px] tracking-wide px-7 py-3 rounded transition-all duration-200 shadow-[0_2px_12px_rgba(201,168,76,0.3)] hover:shadow-[0_4px_20px_rgba(201,168,76,0.45)] hover:-translate-y-px active:translate-y-0"
           >
             {t.cta}
           </a>
