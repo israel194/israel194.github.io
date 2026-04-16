@@ -149,7 +149,7 @@ export default function FloorDetailModal({
         >
           {/* Header */}
           <div className="sticky top-0 z-10 bg-navy text-white rounded-t-2xl px-6 py-4 flex items-center justify-between">
-            <div>
+            <div className="flex-1 text-center">
               <h2 className="text-xl md:text-2xl font-bold">
                 {t.floorPlan} {floorNumber}
               </h2>
@@ -159,7 +159,7 @@ export default function FloorDetailModal({
             </div>
             <button
               onClick={onClose}
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors shrink-0"
               aria-label="Close"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,9 +169,9 @@ export default function FloorDetailModal({
           </div>
 
           {/* Tabu Note */}
-          <div className="mx-4 md:mx-6 mt-4 bg-gold/10 border border-gold/20 rounded-xl px-4 py-3 flex items-center gap-3">
+          <div className="mx-4 md:mx-6 mt-4 bg-gold/10 border border-gold/20 rounded-xl px-4 py-3 flex items-center justify-center gap-3">
             <TabuIcon className="w-5 h-5 text-gold-dark shrink-0" />
-            <span className="text-sm text-navy font-medium">{dict.floors.tabuNote}</span>
+            <span className="text-sm text-navy font-medium text-center">{dict.floors.tabuNote}</span>
           </div>
 
           {/* Floor Plan PDF */}
@@ -213,11 +213,11 @@ export default function FloorDetailModal({
 
             {/* Area Table */}
             <div className="mb-6">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <h3 className="text-lg font-bold text-navy">{t.areaTable}</h3>
+              <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
+                <h3 className="text-lg font-bold text-navy text-center w-full">{t.areaTable}</h3>
 
                 {/* Filters */}
-                <div className="flex flex-wrap items-center gap-2 ms-auto">
+                <div className="flex flex-wrap items-center justify-center gap-2">
                   <select
                     value={filterModel}
                     onChange={(e) => setFilterModel(e.target.value)}
@@ -388,7 +388,7 @@ export default function FloorDetailModal({
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="#contact"
                 onClick={() => {

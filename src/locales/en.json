@@ -72,7 +72,7 @@
     "top": "Floor 40",
     "bottom": "Floor 1",
     "fromUnit": "From a single unit",
-    "unitRange": "From ⅛ of a floor to a full floor — the choice is yours"
+    "unitRange": "From one eighth of a floor to a full floor — the choice is yours"
   },
   "plans": {
     "title": "Floor Plans & Office Layouts",

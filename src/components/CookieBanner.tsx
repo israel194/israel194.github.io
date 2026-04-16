@@ -26,7 +26,11 @@ export default function CookieBanner() {
 
   function decline() {
     localStorage.setItem(STORAGE_KEY, "declined");
-    setVisible(false);
+    // Close the tab; if browser blocks it, navigate away
+    window.close();
+    setTimeout(() => {
+      window.location.href = "about:blank";
+    }, 200);
   }
 
   if (!visible) return null;

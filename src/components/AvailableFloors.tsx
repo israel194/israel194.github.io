@@ -55,9 +55,9 @@ export default function AvailableFloors() {
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex flex-col items-center lg:sticky lg:top-24 w-full lg:w-auto"><TowerDiagram selectedFloor={selectedFloor} onSelect={setSelectedFloor} /></motion.div>
           <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {floorsData.map((floor, i) => (
-              <motion.div key={floor.number} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: Math.min(i * 0.08, 0.4) }} onClick={() => { if (window.matchMedia("(min-width: 768px)").matches) { setSelectedFloor(floor.number); } else { setDetailFloor(floor.number); } }} className={`floor-card cursor-pointer bg-white rounded-2xl p-6 shadow-md border-2 ${selectedFloor === floor.number ? "border-gold" : "border-transparent"}`}>
+              <motion.div key={floor.number} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: Math.min(i * 0.08, 0.4) }} onClick={() => { if (window.matchMedia("(min-width: 768px)").matches) { setSelectedFloor(floor.number); } else { setDetailFloor(floor.number); } }} className={`floor-card cursor-pointer bg-white rounded-2xl p-6 shadow-md border-2 text-center ${selectedFloor === floor.number ? "border-gold" : "border-transparent"}`}>
                 {floor.badgeKey && <div className="bg-gold/10 text-gold-dark text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">{t[floor.badgeKey as keyof typeof t]}</div>}
-                <div className="flex items-baseline justify-between mb-2">
+                <div className="flex flex-col items-center mb-2 gap-1">
                   <h3 className="text-2xl font-bold text-navy">{t.floor} {floor.number}</h3>
                   <span className={`text-xs px-2 py-1 rounded ${floor.zone === "Premium High" ? "bg-gold/20 text-gold-dark" : "bg-navy/10 text-navy"}`}>{floor.zone === "Premium High" ? t.premium : t.midHigh}</span>
                 </div>
@@ -67,10 +67,10 @@ export default function AvailableFloors() {
                   <div className="text-xs text-gray-500 mt-1">{t.unitRange}</div>
                 </div>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm mb-3">
-                  <div><span className="text-gray-400 text-xs">{t.gross}</span><div className="font-medium">{fmt(floor.grossSqm)} {dict.common.sqm}</div></div>
-                  <div><span className="text-gray-400 text-xs">{t.parking}</span><div className="font-medium">{floor.parking} ({t.parkingExtra})</div></div>
+                  <div className="text-center"><span className="text-gray-400 text-xs">{t.gross}</span><div className="font-medium">{fmt(floor.grossSqm)} {dict.common.sqm}</div></div>
+                  <div className="text-center"><span className="text-gray-400 text-xs">{t.parking}</span><div className="font-medium">{floor.parking} ({t.parkingExtra})</div></div>
                 </div>
-                <div className="bg-navy/5 rounded-lg px-3 py-2 mb-4 flex items-center gap-2">
+                <div className="bg-navy/5 rounded-lg px-3 py-2 mb-4 flex items-center justify-center gap-2">
                   <TabuIcon className="w-4 h-4 text-gold-dark shrink-0" />
                   <span className="text-xs text-navy/70 font-medium">{t.tabuNote}</span>
                 </div>
