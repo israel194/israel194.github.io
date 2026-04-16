@@ -24,13 +24,11 @@ export default function CookieBanner() {
     setVisible(false);
   }
 
-  function decline() {
-    localStorage.setItem(STORAGE_KEY, "declined");
-    // Close the tab; if browser blocks it, navigate away
-    window.close();
-    setTimeout(() => {
-      window.location.href = "about:blank";
-    }, 200);
+  // Per Amendment 13: user may decline non-essential cookies and still use the site.
+  // Since we only use essential cookies, "essential only" = same as accepting.
+  function essentialOnly() {
+    localStorage.setItem(STORAGE_KEY, "essential");
+    setVisible(false);
   }
 
   if (!visible) return null;
@@ -39,11 +37,16 @@ export default function CookieBanner() {
     <>
       <div
         role="dialog"
-        aria-label={t.text}
-        className="fixed bottom-0 inset-x-0 z-[200] bg-navy/97 backdrop-blur-sm border-t border-gold/20 shadow-2xl"
+        aria-modal="true"
+        aria-label={t.title}
+        className="fixed bottom-0 inset-x-0 z-[200] bg-navy border-t-2 border-gold/30 shadow-2xl"
       >
-        <div className="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div className="flex-1 text-white/85 text-sm leading-relaxed">
+        <div className="max-w-5xl mx-auto px-4 py-5">
+          {/* Title */}
+          <p className="text-gold font-bold text-sm mb-2">{t.title}</p>
+
+          {/* Body */}
+          <p className="text-white/80 text-sm leading-relaxed mb-4">
             {t.text}{" "}
             <button
               onClick={() => setShowPrivacy(true)}
@@ -51,19 +54,21 @@ export default function CookieBanner() {
             >
               {t.learnMore}
             </button>
-          </div>
-          <div className="flex gap-3 shrink-0">
+          </p>
+
+          {/* Buttons — equally prominent per Amendment 13 */}
+          <div className="flex flex-col sm:flex-row gap-3">
             <button
-              onClick={decline}
-              className="px-4 py-2 rounded-lg border border-white/30 text-white/70 hover:text-white hover:border-white/60 text-sm transition-all"
+              onClick={essentialOnly}
+              className="flex-1 px-5 py-2.5 rounded-lg border-2 border-white/30 text-white font-semibold text-sm hover:border-white/60 hover:bg-white/5 transition-all"
             >
-              {t.decline}
+              {t.essentialOnly}
             </button>
             <button
               onClick={accept}
-              className="px-5 py-2 rounded-lg bg-gold hover:bg-gold-light text-navy font-bold text-sm transition-all shadow"
+              className="flex-1 px-5 py-2.5 rounded-lg border-2 border-gold bg-gold hover:bg-gold-light text-navy font-bold text-sm transition-all shadow"
             >
-              {t.accept}
+              {t.acceptAll}
             </button>
           </div>
         </div>

@@ -18,8 +18,6 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-sm text-white/30">
             <button onClick={() => setModal("privacy")} className="hover:text-gold transition-colors cursor-pointer">{t.privacy}</button>
             <span>|</span>
-            <a href="#" className="hover:text-gold transition-colors">{t.terms}</a>
-            <span>|</span>
             <button onClick={() => setModal("accessibility")} className="hover:text-gold transition-colors cursor-pointer">{t.accessibility}</button>
           </div>
           <div className="text-center text-xs text-white/50 max-w-3xl mx-auto leading-relaxed">{t.disclaimer}</div>

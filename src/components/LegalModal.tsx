@@ -61,11 +61,15 @@ export default function LegalModal({ type, onClose }: Props) {
 
           {isPrivacy ? (
             <>
+              <Section title={p.controller}><p>{p.controllerDesc}</p></Section>
+              <Section title={p.basis}><p>{p.basisDesc}</p></Section>
               <Section title={p.collect}><p>{p.collectDesc}</p></Section>
               <Section title={p.use}><p>{p.useDesc}</p></Section>
+              <Section title={p.retention}><p>{p.retentionDesc}</p></Section>
+              <Section title={p.thirdParty}><p>{p.thirdPartyDesc}</p></Section>
+              <Section title={p.cookies}><p>{p.cookiesDesc}</p></Section>
               <Section title={p.security}><p>{p.securityDesc}</p></Section>
               <Section title={p.rights}><p>{p.rightsDesc}</p></Section>
-              <Section title={p.cookies}><p>{p.cookiesDesc}</p></Section>
               <Section title={p.contact}><p>{p.contactDesc}</p></Section>
             </>
           ) : (

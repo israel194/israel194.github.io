@@ -204,7 +204,6 @@
   },
   "footer": {
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use",
     "accessibility": "Accessibility Statement",
     "disclaimer": "Disclaimer — The content on this website does not constitute a binding offer. Transactions will be conducted according to the sale agreement only. Images and renders are for illustration purposes only. Prices are subject to change without prior notice."
   },
@@ -388,25 +387,34 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "intro": "This Privacy Policy explains how GATE Jerusalem collects, uses and protects your personal information, in accordance with the Protection of Privacy Law (1981) and its regulations.",
-    "collect": "Information We Collect",
-    "collectDesc": "We collect information you voluntarily provide via the contact form: full name, phone number, email address and company name (optional). The website may also collect anonymous technical data for usage analytics.",
-    "use": "Use of Information",
-    "useDesc": "Your information will be used solely to follow up regarding the GATE Jerusalem project and to respond to your inquiries. We will not share your details with any third party without your explicit consent.",
+    "intro": "This policy explains how GATE Jerusalem (\"the Company\") collects, processes and protects personal information, in accordance with Israel's Protection of Privacy Law, 1981, and Amendment No. 13 (effective 14 August 2025).",
+    "controller": "Data Controller",
+    "controllerDesc": "GATE Jerusalem, operated by Asor Law Office. Address: Jerusalem, Israel. Email: office@asor-law.com. Phone: 02-500-0275.",
+    "basis": "Legal Basis for Processing",
+    "basisDesc": "We process your personal data on the basis of explicit consent given when you submit the contact form, and on the basis of legitimate interest in responding to enquiries relating to the real estate project.",
+    "collect": "Types of Data Collected",
+    "collectDesc": "Information voluntarily provided via the contact form: full name, phone number, email address, company name (optional). We do not collect sensitive personal information as defined by law.",
+    "use": "Purposes of Processing",
+    "useDesc": "Your data is used solely to respond to your enquiry and to follow up regarding the GATE Jerusalem project. It will not be used for any other marketing purpose without your consent.",
+    "retention": "Data Retention",
+    "retentionDesc": "Personal data is retained for no longer than 24 months from the date of receipt, or until your enquiry has been fully addressed — whichever comes first. Data is then securely deleted.",
+    "thirdParty": "Third-Party Transfers",
+    "thirdPartyDesc": "We do not share your personal data with any third party without your explicit consent, except for service providers necessary to operate the website (hosting, email) — who are bound by confidentiality obligations. No data is transferred outside Israel.",
+    "cookies": "Cookies and Digital Identifiers",
+    "cookiesDesc": "This website uses only essential cookies required for its operation (saving language preference and your consent response). We do not use tracking, advertising or third-party analytics cookies. Essential cookies do not require consent.",
     "security": "Data Security",
-    "securityDesc": "We employ industry-standard security measures to protect your information. Data is stored on secured, protected servers.",
-    "rights": "Your Rights",
-    "rightsDesc": "Under applicable law, you have the right to access, correct or request deletion of your personal information. For such requests, please contact us directly.",
-    "cookies": "Cookies",
-    "cookiesDesc": "This website may use cookies for analytics and to improve your browsing experience. You can disable cookies in your browser settings.",
-    "contact": "Contact",
-    "contactDesc": "For questions regarding this Privacy Policy, contact us: office@asor-law.com",
-    "date": "This policy was last updated: April 2026"
+    "securityDesc": "We apply appropriate technical and organisational security measures. Access to personal data is limited to authorised personnel only. In the event of a significant security incident, we will act in accordance with legal reporting obligations.",
+    "rights": "Your Rights Under the Law",
+    "rightsDesc": "Under the Protection of Privacy Law and Amendment 13, you have the right to access your personal data, request correction, update or deletion, object to processing, and withdraw consent at any time. Requests will be handled within 30 days.",
+    "contact": "Privacy Enquiries",
+    "contactDesc": "For any question, request or complaint regarding privacy, contact us: office@asor-law.com | 02-500-0275. You may also contact the Israeli Privacy Protection Authority: gov.il/ppa",
+    "date": "This policy was last updated: April 2026 — in accordance with Amendment 13 to the Law"
   },
   "cookieBanner": {
-    "text": "We use cookies to enhance your browsing experience and analyze site traffic, in accordance with applicable privacy law. Continuing to browse constitutes your consent.",
-    "accept": "Accept",
-    "decline": "Decline",
-    "learnMore": "Learn more"
+    "title": "Privacy & Cookie Settings",
+    "text": "We use only essential cookies — required to operate the site (saving language preference and this consent). We do not use tracking or advertising cookies. Under Israel's Privacy Protection Law Amendment 13 (2025), you may choose:",
+    "acceptAll": "Accept Essential Cookies",
+    "essentialOnly": "Essential Only",
+    "learnMore": "Full Privacy Policy"
   }
 }
