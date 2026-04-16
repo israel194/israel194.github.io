@@ -17,7 +17,7 @@ function StructuredData({ dict, lang }: { dict: Awaited<ReturnType<typeof getDic
     description: dict.hero.subtitle1 + " " + dict.hero.subtitle2,
     url: `${SITE_URL}/${lang}`,
     image: `${SITE_URL}/images/Gate_v1_hi-res_0821.jpg`,
-    telephone: "+972-54-630-2880",
+    telephone: "+972-2-500-0275",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Shazar Boulevard, Jerusalem Entrance",
@@ -45,7 +45,7 @@ function StructuredData({ dict, lang }: { dict: Awaited<ReturnType<typeof getDic
     logo: `${SITE_URL}/logos/bsr.png`,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+972-54-630-2880",
+      telephone: "+972-2-500-0275",
       contactType: "sales",
       availableLanguage: ["Hebrew", "English", "Arabic"],
     },
