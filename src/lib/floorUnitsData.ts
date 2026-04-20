@@ -92,10 +92,10 @@ const floor37Units: FloorUnit[] = [
 export const floorsDetailData: FloorData[] = [
   {
     number: 21,
-    pricePerSqm: 20500,
+    pricePerSqm: 21000,
     grossSqm: 1550,
     netSqm: 1131,
-    totalPrice: 31775000,
+    totalPrice: 32193000, // 1533 pricingSqm × 21,000
     parking: 8,
     zone: "Mid-High",
     badgeKey: "",
@@ -104,10 +104,10 @@ export const floorsDetailData: FloorData[] = [
   },
   {
     number: 22,
-    pricePerSqm: 20500,
+    pricePerSqm: 21000,
     grossSqm: 1550,
     netSqm: 1131,
-    totalPrice: 31775000,
+    totalPrice: 32277000, // 1537 pricingSqm × 21,000
     parking: 8,
     zone: "Mid-High",
     badgeKey: "",
@@ -116,10 +116,10 @@ export const floorsDetailData: FloorData[] = [
   },
   {
     number: 24,
-    pricePerSqm: 20500,
+    pricePerSqm: 21000,
     grossSqm: 1550,
     netSqm: 1131,
-    totalPrice: 31775000,
+    totalPrice: 32445000, // 1545 pricingSqm × 21,000
     parking: 8,
     zone: "Mid-High",
     badgeKey: "allElevators",
@@ -131,7 +131,7 @@ export const floorsDetailData: FloorData[] = [
     pricePerSqm: 23500,
     grossSqm: 1700,
     netSqm: 1249,
-    totalPrice: 39950000,
+    totalPrice: 39738500, // 1691 pricingSqm × 23,500
     parking: 8,
     zone: "Premium High",
     badgeKey: "panoramic",
@@ -140,10 +140,10 @@ export const floorsDetailData: FloorData[] = [
   },
   {
     number: 37,
-    pricePerSqm: 23500,
+    pricePerSqm: 25000,
     grossSqm: 1700,
     netSqm: 1249,
-    totalPrice: 39950000,
+    totalPrice: 42425000, // 1697 pricingSqm × 25,000
     parking: 8,
     zone: "Premium High",
     badgeKey: "panoramic",

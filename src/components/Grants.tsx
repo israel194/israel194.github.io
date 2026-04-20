@@ -14,11 +14,11 @@ export default function Grants() {
   ];
 
   return (
-    <section className="py-20 bg-navy" id="grants">
+    <section className="py-12 md:py-16 bg-navy" id="grants">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} className="text-3xl md:text-4xl font-bold text-center text-white mb-4">{t.title}</motion.h2>
-        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center text-white/60 mb-12">{t.subtitle}</motion.p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center text-white/60 mb-8">{t.subtitle}</motion.p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {grants.map((g, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.1 }} className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 text-center">
               <div className="text-2xl md:text-3xl font-bold text-gold mb-3">{g.amount}</div>

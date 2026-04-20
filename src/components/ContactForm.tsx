@@ -5,11 +5,11 @@ import { useState, useEffect, useRef } from "react";
 import { useI18n } from "./LandingPage";
 
 const floorOptions = [
-  { value: "21", grossSqm: "1,550", price: "₪31,775,000" },
-  { value: "22", grossSqm: "1,550", price: "₪31,775,000" },
-  { value: "24", grossSqm: "1,550", price: "₪31,775,000" },
-  { value: "35", grossSqm: "1,700", price: "₪39,950,000" },
-  { value: "37", grossSqm: "1,700", price: "₪39,950,000" },
+  { value: "21" },
+  { value: "22" },
+  { value: "24" },
+  { value: "35" },
+  { value: "37" },
 ];
 
 export default function ContactForm() {
@@ -68,7 +68,7 @@ export default function ContactForm() {
                 <select name="floor_interest" ref={selectRef} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-navy bg-white">
                   <option value="all">{t.allFloors}</option>
                   {floorOptions.map((f) => (
-                    <option key={f.value} value={f.value}>{dict.floors.floor} {f.value} — {f.grossSqm} {dict.common.sqm} — {f.price}</option>
+                    <option key={f.value} value={f.value}>{dict.floors.floor} {f.value}</option>
                   ))}
                 </select>
               </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Heebo, Inter, Noto_Sans_Arabic } from "next/font/google";
+import { Heebo, Inter, Noto_Sans_Arabic, Frank_Ruhl_Libre } from "next/font/google";
 import "./globals.css";
 
 const heebo = Heebo({
@@ -21,6 +21,13 @@ const notoArabic = Noto_Sans_Arabic({
   variable: "--font-noto-arabic",
   display: "swap",
   weight: ["400", "600", "700", "800"],
+});
+
+const frankRuhl = Frank_Ruhl_Libre({
+  subsets: ["latin", "hebrew"],
+  variable: "--font-frank",
+  display: "swap",
+  weight: ["400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {

@@ -24,6 +24,8 @@ import WhatsAppButton from "./WhatsAppButton";
 import StickyMobileCTA from "./StickyMobileCTA";
 import LanguageSwitcher from "./LanguageSwitcher";
 import AccessibilityWidget from "./AccessibilityWidget";
+import CommitteeVideo from "./CommitteeVideo";
+import FloatingVideoButton from "./FloatingVideoButton";
 import CookieBanner from "./CookieBanner";
 
 interface I18nContext {
@@ -31,7 +33,7 @@ interface I18nContext {
   lang: Locale;
 }
 
-const I18nCtx = createContext<I18nContext>(null!);
+export const I18nCtx = createContext<I18nContext>(null!);
 
 export function useI18n() {
   return useContext(I18nCtx);
@@ -63,8 +65,10 @@ export default function LandingPage({
           <TrustBar />
           <ContactForm />
           <FAQ />
+          <CommitteeVideo />
           <Footer />
           <WhatsAppButton />
+          <FloatingVideoButton />
           <StickyMobileCTA />
           <AccessibilityWidget />
           <CookieBanner />

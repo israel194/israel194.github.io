@@ -20,7 +20,7 @@ export default function Timeline() {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} className="text-2xl md:text-3xl font-bold text-center text-navy mb-12">{t.title}</motion.h2>
         <div className="relative">
           <div className="absolute top-5 right-0 left-0 h-0.5 bg-gray-200 hidden md:block" />
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+          <div className="flex flex-col sm:grid sm:grid-cols-5 gap-6 md:gap-4">
             {milestones.map((m, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.1 }} className="text-center relative">
                 <div className={`w-10 h-10 rounded-full mx-auto mb-3 flex items-center justify-center ${m.done ? "bg-gold text-navy" : "bg-gray-200 text-gray-400"}`}>

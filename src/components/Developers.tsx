@@ -17,6 +17,7 @@ export default function Developers() {
   return (
     <section className="py-10 md:py-16 bg-navy" id="developers">
       <div className="max-w-6xl mx-auto px-4">
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center text-white/40 text-xs uppercase tracking-widest mb-6">{t.title}</motion.p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {devs.map((dev, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.08 }} className="bg-gray-light rounded-2xl p-5 flex flex-col items-center justify-center text-center hover:shadow-md transition-shadow">
