@@ -58,7 +58,7 @@ export default function Navbar() {
         {/* Logo — fixed width to balance the CTA on the other side */}
         <a href="#" className="flex flex-col leading-none lg:w-32">
           <span className="text-white font-bold text-2xl tracking-[0.2em] uppercase">
-            GATE<span className="text-gold">.</span>
+            GAT<span className="tracking-normal">E<span className="text-gold">.</span></span>
           </span>
           <span className="text-white/40 text-[10px] tracking-[0.3em] uppercase font-medium mt-0.5">
             Jerusalem
