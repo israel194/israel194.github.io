@@ -11,9 +11,9 @@ const floorsData = [
   { number: 21, pricePerSqm: 21000, grossSqm: 1550, netSqm: 1131, totalPrice: 32550000, parking: 8, zone: "Mid-High", badgeKey: "", sold: false, soldNote: "" },
   { number: 22, pricePerSqm: 21000, grossSqm: 1550, netSqm: 1131, totalPrice: 32550000, parking: 8, zone: "Mid-High", badgeKey: "", sold: false, soldNote: "" },
   { number: 24, pricePerSqm: 21000, grossSqm: 1550, netSqm: 1131, totalPrice: 32550000, parking: 8, zone: "Mid-High", badgeKey: "allElevators", sold: false, soldNote: "" },
-  { number: 35, pricePerSqm: 23500, grossSqm: 1700, netSqm: 1241, totalPrice: 39950000, parking: 8, zone: "Premium High", badgeKey: "panoramic", sold: false, soldNote: "נותרו 2 יחידות" },
+  { number: 35, pricePerSqm: 23500, grossSqm: 1700, netSqm: 1241, totalPrice: 39950000, parking: 8, zone: "Premium High", badgeKey: "panoramic", sold: false, soldNote: "" },
   { number: 33, pricePerSqm: 23500, grossSqm: 1700, netSqm: 1241, totalPrice: 39950000, parking: 8, zone: "Premium High", badgeKey: "", sold: true, soldNote: "" },
-  { number: 37, pricePerSqm: 24000, grossSqm: 1700, netSqm: 1241, totalPrice: 40728000, parking: 8, zone: "Premium High", badgeKey: "panoramic", sold: false, soldNote: "נותרו 6 יחידות" },
+  { number: 37, pricePerSqm: 24000, grossSqm: 1700, netSqm: 1241, totalPrice: 40728000, parking: 8, zone: "Premium High", badgeKey: "panoramic", sold: false, soldNote: "" },
 ];
 
 function fmt(n: number) { return n.toLocaleString("en-US"); }
