@@ -107,7 +107,7 @@ export default function TheQuarter() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 border border-white/10 rounded-2xl p-8"
+            className="bg-white/5 border border-white/10 rounded-2xl p-5 md:p-8"
           >
             <h3 className="text-xl font-bold text-gold mb-4">{t.whyTitle}</h3>
             <p className="text-white/70 leading-relaxed">{t.whyDesc}</p>
@@ -116,7 +116,7 @@ export default function TheQuarter() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 border border-white/10 rounded-2xl p-8"
+            className="bg-white/5 border border-white/10 rounded-2xl p-5 md:p-8"
           >
             <h3 className="text-xl font-bold text-gold mb-4">{t.planned}</h3>
             <p className="text-white/70 leading-relaxed">{t.plannedDesc}</p>

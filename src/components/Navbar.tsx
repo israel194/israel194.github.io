@@ -48,7 +48,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 md:top-11 right-0 left-0 z-50 pt-[env(safe-area-inset-top)] transition-all duration-500 ease-in-out ${
+      className={`fixed top-11 right-0 left-0 z-50 transition-all duration-500 ease-in-out ${
         scrolled
           ? "bg-[#1a2744]/96 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.35)] pb-7 border-b border-white/8"
           : "bg-transparent pb-8"

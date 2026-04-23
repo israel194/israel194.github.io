@@ -28,13 +28,13 @@ export default function FloatingVideoButton() {
       <AnimatePresence>
         {visible && (
           <motion.button
-            initial={{ opacity: 0, scale: 0.7, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.7, y: 20 }}
+            initial={{ opacity: 0, scale: 0.7, x: -20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            exit={{ opacity: 0, scale: 0.7, x: -20 }}
             transition={{ type: "spring", stiffness: 300, damping: 22 }}
             onClick={() => setVideoOpen(true)}
             aria-label={dict.hero.videoLabel}
-            className="fixed bottom-24 left-5 z-50 group flex flex-col items-center gap-1.5"
+            className="fixed left-4 top-1/2 -translate-y-1/2 z-50 group flex flex-col items-center gap-1.5"
           >
             {/* Pulsing ring */}
             <div className="relative flex items-center justify-center">

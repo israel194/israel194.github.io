@@ -19,9 +19,9 @@ export default function WhyGate() {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} className="text-3xl md:text-4xl font-bold text-center text-navy mb-10">
           {renderGoldTitle(t.title)}
         </motion.h2>
-        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-8 items-stretch">
           {reasons.map((r, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.15 }} className={`rounded-2xl p-8 text-center transition-shadow duration-300 ${r.featured ? "bg-navy text-white shadow-xl ring-1 ring-gold/30 md:scale-[1.03]" : "bg-gray-light hover:shadow-lg"}`}>
+            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.15 }} className={`rounded-2xl p-6 md:p-8 text-center transition-shadow duration-300 ${r.featured ? "bg-navy text-white shadow-xl ring-1 ring-gold/30 md:scale-[1.03]" : "bg-gray-light hover:shadow-lg"}`}>
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${r.featured ? "bg-gold text-navy" : "bg-navy text-gold"}`}>{r.icon}</div>
               <h3 className={`text-xl font-bold mb-4 ${r.featured ? "text-white" : "text-navy"}`}>{r.title}</h3>
               <p className={`leading-relaxed ${r.featured ? "text-white/80" : "text-gray-600"}`}>{r.description}</p>

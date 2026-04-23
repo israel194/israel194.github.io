@@ -34,7 +34,7 @@ export default function StatsBar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
           {stats.map((stat, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.08 }} className="bg-white/5 rounded-xl px-4 py-5 border border-white/8 hover:bg-white/8 transition-colors">
+            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: i * 0.08 }} className={`bg-white/5 rounded-xl px-4 py-5 border border-white/8 hover:bg-white/8 transition-colors ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}>
               <div className="text-gold/70 flex justify-center mb-3">{stat.icon}</div>
               <div className="text-3xl md:text-4xl font-bold text-gold"><AnimatedNumber target={stat.number} suffix={stat.suffix} /></div>
               <div className="text-white font-medium text-sm mt-1.5">{stat.label}</div>
