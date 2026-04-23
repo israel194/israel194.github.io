@@ -284,7 +284,6 @@ export default function FloorDetailModal({
                         <div><span className="text-gray-400 text-xs no-underline">{t.pricingArea}</span><div className={`font-medium ${unit.sold ? "" : "text-navy"}`}>{fmt(unit.pricingSqm)}</div></div>
                         {unit.balcony > 0 && <div><span className="text-gray-400 text-xs">{t.balcony}</span><div className="text-gray-500">{fmt(unit.balcony)}</div></div>}
                         {unit.shelter > 0 && <div><span className="text-gray-400 text-xs">{t.shelter}</span><div className="text-gray-500">{fmt(unit.shelter)}</div></div>}
-                        {!unit.sold && <div><span className="text-gray-400 text-xs">חניה</span><div className="font-medium text-navy">1</div></div>}
                       </div>
                       <div className="mt-3 pt-3 border-t border-gray-200 text-end">
                         <span className="text-xs text-gray-400">{t.unitPrice}</span>
@@ -298,10 +297,9 @@ export default function FloorDetailModal({
                 )}
                 <div className="bg-navy/5 rounded-xl p-4 font-bold text-sm">
                   <div className="flex justify-between mb-1"><span>{t.total} ({availableFiltered.length}/{floor.units.length})</span></div>
-                  <div className="grid grid-cols-3 gap-2 text-sm">
+                  <div className="grid grid-cols-2 gap-2 text-sm">
                     <div><span className="text-gray-400 text-xs font-normal">{t.netArea}</span><div>{fmt(totalNet)}</div></div>
                     <div><span className="text-gray-400 text-xs font-normal">{t.pricingArea}</span><div className="text-navy">{fmt(totalPricing)}</div></div>
-                    <div><span className="text-gray-400 text-xs font-normal">חניות</span><div className="text-navy">{availableFiltered.length}</div></div>
                   </div>
                   <div className="mt-2 text-end text-gold-dark">{fmtPrice(totalPrice)}</div>
                 </div>
@@ -319,7 +317,6 @@ export default function FloorDetailModal({
                       <ThCell k="balcony" end>{t.balcony}</ThCell>
                       <ThCell k="shelter" end>{t.shelter}</ThCell>
                       <ThCell k="pricingSqm" end>{t.pricingArea}</ThCell>
-                      <th className="px-2 py-2.5 text-end font-medium">חניה</th>
                       <ThCell k="price" end>{t.unitPrice}</ThCell>
                     </tr>
                   </thead>
@@ -361,9 +358,6 @@ export default function FloorDetailModal({
                           <td className={`px-2 py-2.5 text-end font-medium ${unit.sold ? "line-through text-gray-400" : "text-navy"}`}>
                             {fmt(unit.pricingSqm)}
                           </td>
-                          <td className={`px-2 py-2.5 text-end ${unit.sold ? "text-gray-300" : "text-navy font-medium"}`}>
-                            {unit.sold ? "—" : "1"}
-                          </td>
                           <td className={`px-2 py-2.5 text-end font-bold ${unit.sold ? "line-through text-gray-400" : "text-gold-dark"}`}>
                             {unit.sold ? "—" : fmtPrice(price)}
                           </td>
@@ -372,7 +366,7 @@ export default function FloorDetailModal({
                     })}
                     {sorted.length === 0 && (
                       <tr>
-                        <td colSpan={9} className="px-3 py-8 text-center text-gray-400 text-sm">{t.noResults}</td>
+                        <td colSpan={8} className="px-3 py-8 text-center text-gray-400 text-sm">{t.noResults}</td>
                       </tr>
                     )}
                   </tbody>
@@ -385,7 +379,6 @@ export default function FloorDetailModal({
                       <td className="px-2 py-3 text-end text-gray-500">{totalBalcony > 0 ? fmt(totalBalcony) : "—"}</td>
                       <td className="px-2 py-3 text-end text-gray-500">{totalShelter > 0 ? fmt(totalShelter) : "—"}</td>
                       <td className="px-2 py-3 text-end text-navy">{fmt(totalPricing)}</td>
-                      <td className="px-2 py-3 text-end text-navy">{availableFiltered.length}</td>
                       <td className="px-2 py-3 text-end text-gold-dark">{fmtPrice(totalPrice)}</td>
                     </tr>
                   </tfoot>
@@ -404,10 +397,13 @@ export default function FloorDetailModal({
                 <div className="text-xs text-gray-500 mb-1">{hasSoldUnits ? "מחיר יחידות זמינות" : t.totalFloorPrice}</div>
                 <div className="text-lg font-bold text-gold-dark">{fmtPrice(hasSoldUnits ? availTotals.totalPrice : floor.totalPrice)}</div>
               </div>
-              <div className="bg-navy/5 rounded-xl p-4 text-center">
-                <div className="text-xs text-gray-500 mb-1">{t.parkingSpots}</div>
-                <div className="text-lg font-bold text-navy">{floor.parking}</div>
-                <div className="text-xs text-gray-400">8 חניות לקומה, תמחור נפרד</div>
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center flex flex-col items-center gap-1.5">
+                <svg className="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 17H3a2 2 0 01-2-2V7a2 2 0 012-2h11l4 4v6a2 2 0 01-2 2h-1M5 17a2 2 0 104 0M5 17a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                </svg>
+                <div className="text-sm font-bold text-amber-800">8 חניות לקומה</div>
+                <div className="text-xs text-amber-600 font-medium">חניה אחת לכל יחידה</div>
+                <div className="text-[11px] text-amber-500 bg-amber-100 px-2 py-0.5 rounded-full font-semibold">תמחור נפרד</div>
               </div>
               <div className="bg-navy/5 rounded-xl p-4 text-center">
                 <div className="text-xs text-gray-500 mb-1">{t.payment}</div>
