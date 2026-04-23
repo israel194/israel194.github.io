@@ -123,12 +123,13 @@ export default function FloorDetailModal({
     );
   }
 
-  // Totals for filtered rows
-  const totalNet = filtered.reduce((s, u) => s + u.netSqm, 0);
-  const totalBalcony = filtered.reduce((s, u) => s + u.balcony, 0);
-  const totalShelter = filtered.reduce((s, u) => s + u.shelter, 0);
-  const totalPricing = filtered.reduce((s, u) => s + u.pricingSqm, 0);
-  const totalPrice = filtered.reduce((s, u) => s + getUnitPrice(u, floor.pricePerSqm), 0);
+  // Totals — only available (non-sold) units
+  const availableFiltered = filtered.filter((u) => !u.sold);
+  const totalNet = availableFiltered.reduce((s, u) => s + u.netSqm, 0);
+  const totalBalcony = availableFiltered.reduce((s, u) => s + u.balcony, 0);
+  const totalShelter = availableFiltered.reduce((s, u) => s + u.shelter, 0);
+  const totalPricing = availableFiltered.reduce((s, u) => s + u.pricingSqm, 0);
+  const totalPrice = availableFiltered.reduce((s, u) => s + getUnitPrice(u, floor.pricePerSqm), 0);
 
   const hasActiveFilter = filterDirection !== "all" || filterModel !== "all";
 
@@ -295,7 +296,7 @@ export default function FloorDetailModal({
                   <div className="py-8 text-center text-gray-400 text-sm">{t.noResults}</div>
                 )}
                 <div className="bg-navy/5 rounded-xl p-4 font-bold text-sm">
-                  <div className="flex justify-between mb-1"><span>{t.total} {hasActiveFilter && `(${filtered.length}/${floor.units.length})`}</span></div>
+                  <div className="flex justify-between mb-1"><span>{t.total} ({availableFiltered.length}/{floor.units.length})</span></div>
                   <div className="grid grid-cols-2 gap-2 text-sm">
                     <div><span className="text-gray-400 text-xs font-normal">{t.netArea}</span><div>{fmt(totalNet)}</div></div>
                     <div><span className="text-gray-400 text-xs font-normal">{t.pricingArea}</span><div className="text-navy">{fmt(totalPricing)}</div></div>
@@ -372,7 +373,7 @@ export default function FloorDetailModal({
                   <tfoot>
                     <tr className="bg-navy/5 font-bold text-sm">
                       <td className="px-2 py-3" colSpan={3}>
-                        {t.total} {hasActiveFilter && `(${filtered.length}/${floor.units.length})`}
+                        {t.total} {`(${availableFiltered.length}/${floor.units.length})`}
                       </td>
                       <td className="px-2 py-3 text-end">{fmt(totalNet)}</td>
                       <td className="px-2 py-3 text-end text-gray-500">{totalBalcony > 0 ? fmt(totalBalcony) : "—"}</td>
