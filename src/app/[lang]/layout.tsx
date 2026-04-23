@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { locales, dirMap, type Locale } from "@/lib/i18n";
 import type { Metadata } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://israel194.github.io";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://israel194.github.io/gate";
 
 const metadataMap: Record<Locale, Metadata> = {
   he: {
