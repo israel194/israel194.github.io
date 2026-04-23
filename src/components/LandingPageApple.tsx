@@ -325,7 +325,7 @@ function AppleFloors({ dict }: { dict: Dictionary }) {
             <p className="text-xs uppercase tracking-widest text-[#6e6e73] mb-3">{dict.floors.paymentTitle}</p>
             <div className="flex items-center justify-center gap-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/hapoalim.svg" alt="בנק הפועלים" className="h-7 w-auto" />
+              <img src="/gate/logos/hapoalim.svg" alt="בנק הפועלים" className="h-7 w-auto" />
               <span className="text-[#6e6e73] text-sm border-r border-[#d2d2d7] pr-4">בנק מלווה רשמי</span>
             </div>
           </div>
@@ -488,10 +488,10 @@ function LocationCard({ d, dict }: { d: { time: string; name: string; hook: stri
 /* ─── Trust / Partners ──────────────────────────────────── */
 function ApplePartners({ dict }: { dict: Dictionary }) {
   const logos = [
-    { src: "/logos/bsr.png",       alt: "B.S.R Group",    bg: "bg-[#1a2744]" },
-    { src: "/logos/jtlv.png",      alt: "JTLV Fund",      bg: "bg-white" },
-    { src: "/logos/blk.png",       alt: "BLK Architects", bg: "bg-white" },
-    { src: "/logos/hapoalim.svg",  alt: "בנק הפועלים",   bg: "bg-white" },
+    { src: "/gate/logos/bsr.png",       alt: "B.S.R Group",    bg: "bg-[#1a2744]" },
+    { src: "/gate/logos/jtlv.png",      alt: "JTLV Fund",      bg: "bg-white" },
+    { src: "/gate/logos/blk.png",       alt: "BLK Architects", bg: "bg-white" },
+    { src: "/gate/logos/hapoalim.svg",  alt: "בנק הפועלים",   bg: "bg-white" },
   ];
   const trust = [dict.trust.years, dict.trust.projects, dict.trust.sales, dict.trust.leed];
   return (

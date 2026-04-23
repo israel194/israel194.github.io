@@ -7,11 +7,11 @@ export default function Developers() {
   const { dict } = useI18n();
   const t = dict.developers;
   const devs = [
-    { name: "B.S.R Group", logo: "/logos/bsr.png", logoBg: "bg-navy", role: t.roleDeveloper },
-    { name: "JTLV Fund", logo: "/logos/jtlv.png", logoBg: "bg-white border border-gray-200", role: t.roleInvestor },
+    { name: "B.S.R Group", logo: "/gate/logos/bsr.png", logoBg: "bg-navy", role: t.roleDeveloper },
+    { name: "JTLV Fund", logo: "/gate/logos/jtlv.png", logoBg: "bg-white border border-gray-200", role: t.roleInvestor },
     { name: "Yehuda Rahamim", logo: null, logoBg: "", role: t.roleContractor },
-    { name: "BLK Architects", logo: "/logos/blk.png", logoBg: "bg-white border border-gray-200", role: t.architect },
-    { name: "Bank Hapoalim", logo: "/logos/hapoalim.svg", logoBg: "bg-white border border-gray-200", role: t.bankBadge },
+    { name: "BLK Architects", logo: "/gate/logos/blk.png", logoBg: "bg-white border border-gray-200", role: t.architect },
+    { name: "Bank Hapoalim", logo: "/gate/logos/hapoalim.svg", logoBg: "bg-white border border-gray-200", role: t.bankBadge },
   ];
 
   return (
